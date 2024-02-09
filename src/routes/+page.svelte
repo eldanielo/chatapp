@@ -79,7 +79,7 @@
 
       }
       if (userInput.value === "b4d2858e-129a-43b3-ac5e-1e09b74beb9c") {
-        header.textContent = "Nova Dynamics?";
+        header.textContent = "Nova Dynamics";
         h1.textContent ="What is Nova Dynamics?";
         paragraph.textContent = "Nova Dynamics gives you the expert insights, stock picks, and cutting-edge analysis to crush the crypto markets. Stop missing out – join the revolution today!"
         displayImage.setAttribute('src', "nova.jpg");
