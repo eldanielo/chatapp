@@ -75,13 +75,16 @@
         h1.textContent ="Welcome to Dubai!";
         paragraph.textContent = "Step into a world of dazzling contrasts, where towering skyscrapers stand alongside ancient souks, and the desert beckons just beyond the city limits.  Dubai is a destination that redefines luxury, offering unparalleled experiences from Michelin-starred dining to adrenaline-pumping adventures. Embark on your journey into this magnificent oasis."
         displayImage.setAttribute('src', "dubai.svg");
+        chattitle.setAttribute("placeholder-text", "Ask me anything about Dubai");
+
       }
       if (userInput.value === "b4d2858e-129a-43b3-ac5e-1e09b74beb9c") {
-        console.log("Dubai Trav");
         header.textContent = "Nova Dynamics?";
         h1.textContent ="What is Nova Dynamics?";
         paragraph.textContent = "Nova Dynamics gives you the expert insights, stock picks, and cutting-edge analysis to crush the crypto markets. Stop missing out – join the revolution today!"
         displayImage.setAttribute('src', "nova.jpg");
+        chattitle.setAttribute("placeholder-text", "Ask me anything about Nova Dynamics");
+
       }
     });
   });
