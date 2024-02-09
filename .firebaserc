@@ -1,12 +1,17 @@
 {
   "projects": {
-    "default": "your-project-id"
+    "default": "mineral-concord-394714"
   },
   "targets": {
     "your-project-id": {
       "hosting": {
-        "your-firebase-app-name": [
-          "your-firebase-app-name"
+        "target": "chatappfsr"
+      }
+    },
+    "mineral-concord-394714": {
+      "hosting": {
+        "chatappfsr": [
+          "chatappfsr"
         ]
       }
     }
