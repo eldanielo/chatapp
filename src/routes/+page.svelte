@@ -134,7 +134,7 @@ let chattitle = document.getElementById('chat-title')
           class="drop-shadow-lg"
           max-query-length=-1>
           <df-messenger-chat id='chat-title'
-            chat-title="Nova Dynamics- Vertex AI Conversation"
+            chat-title="Vertex AI Conversation"
             bot-writing-text="..."
             placeholder-text="Ask me anything about Nova Dyanmics" />
         </df-messenger>
