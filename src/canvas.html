@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Screenshot</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <input type="url" id="urlInput" placeholder="Enter URL">
+    <button id="submitButton">Take Screenshot</button>
+
+    <script>
+        const submitButton = document.getElementById('submitButton');
+        const urlInput = document.getElementById('urlInput');
+
+        submitButton.addEventListener('click', () => {
+            const url = urlInput.value;
+
+            html2canvas(document.querySelector("body"), {
+                proxy: "https://html2canvasproxy.herokuapp.com/",  // Optional proxy to bypass CORS issues
+                allowTaint: true, // May be needed to allow images 
+                useCORS: true
+            }).then(canvas => {
+                document.body.style.backgroundImage = `url(${canvas.toDataURL()})`;
+            });
+        });
+    </script>
+</body>
+</html>

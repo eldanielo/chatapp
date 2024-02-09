@@ -1,0 +1,50 @@
+{
+    "displayName": "hello-request",
+    "description": "hello",
+    "manifest": {
+      "name": "hello_exteions",
+      "description": "hello_exteions",
+      "apiSpec": {
+        "openApiGcsUri": "gs://extensiondp/hello.yaml"
+      },
+      "authConfig": {
+        "authType": "NO_AUTH"
+      },
+      "extensionSelectionExamples": [
+        {
+          "query": "Say hello in French",
+          "multiSteps": [
+            {
+              "thought": "I should call hello_exteions for this",
+              "extensionExecution": {
+                "operationId": "1",
+                "extensionInstruction": "Say hello in French",
+                "observation": "{\"extensionOutput\": \"bonjour\"}"
+              }
+            },
+            {
+              "thought": "Since the observation was successful, I should respond back to the user with results",
+              "respondToUser": {}
+            }
+          ]
+        }
+      ],
+      "extensionInvocationExamples": [
+        {
+          "extensionInstruction": "Say hello in French",
+          "operationId": "1",
+          "thought": "Issue a 1 operation request on hello_exteions tool with prompt French",
+          "operationParam": "{\"lang\": \"French\"}",
+          "parametersMentioned": [
+            "lang"
+          ]
+        }
+      ],
+      "extensionResponseExamples": [
+        {
+          "operationId": "1",
+          "responseTemplate": "{ { response.extensionOutput } }"
+        }
+      ]
+    }
+  }
