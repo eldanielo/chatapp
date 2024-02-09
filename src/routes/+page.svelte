@@ -120,7 +120,14 @@ let chattitle = document.getElementById('chat-title')
               
           <label>Agent ID here:</label>
           <input type="text" id="userInput" value="b4d2858e-129a-43b3-ac5e-1e09b74beb9c">
-          </div>
+          <br>
+          <label>Dubai Travel: </label>
+          <input type="text" value="c749604b-867c-4836-a256-cb81c2ee5754" readonly>
+          <br>
+          <label>Nova Dynamics: </label>
+          <input type="text" value="b4d2858e-129a-43b3-ac5e-1e09b74beb9c" readonly>
+
+        </div>
 
       </div>
       <div class="m-50 w-2/5" style="min-height:500px">
