@@ -68,7 +68,7 @@ let chattitle = document.getElementById('chat-title')
   header.addEventListener('input', function() {
     console.log("header" + header?.textContent);
     console.log(h1?.textContent)
-    h1.textContent = "What is " + header?.textContent + " ?";
+    h1.textContent = header?.textContent;
     chattitle?.setAttribute('chat-title', header?.textContent + " Vertex AI Search");
     chattitle?.setAttribute('placeholder-text', "Ask me anything about " + header?.textContent)
 
@@ -117,15 +117,14 @@ let chattitle = document.getElementById('chat-title')
            
         </p>
         <div id="hiddenElement" >
-              
-          <label>Agent ID here:</label>
-          <input type="text" id="userInput" value="b4d2858e-129a-43b3-ac5e-1e09b74beb9c">
-          <br>
-          <label>Dubai Travel: </label>
-          <input type="text" value="c749604b-867c-4836-a256-cb81c2ee5754" readonly>
-          <br>
-          <label>Nova Dynamics: </label>
-          <input type="text" value="b4d2858e-129a-43b3-ac5e-1e09b74beb9c" readonly>
+          <label>Agent ID: </label>
+          <input type="text" id="userInput" list="itemDatalist">
+          <datalist id="itemDatalist">
+            <option value="b4d2858e-129a-43b3-ac5e-1e09b74beb9c" label="Nova Dynamics">
+            <option value="c749604b-867c-4836-a256-cb81c2ee5754" label="Dubai Travel">
+          </datalist>
+
+
 
         </div>
 
