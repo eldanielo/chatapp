@@ -187,7 +187,7 @@
           <input type="text" id="userInput" list="itemDatalist" />
           <datalist id="itemDatalist">
             <option value="b4d2858e-129a-43b3-ac5e-1e09b74beb9c" label="Nova Dynamics" /><option
-            <option value="4b1546ef-fb28-4dca-972a-190c7c6dbc8b" label="DubaiEvent" /><option
+            <option value="4b1546ef-fb28-4dca-972a-190c7c6dbc8b" label="DubaiEvent" /><option 
               value="c749604b-867c-4836-a256-cb81c2ee5754"
               label="Dubai Travel" /></datalist>
               <br>
@@ -219,7 +219,7 @@
             id="chat-title"
             chat-title="Vertex AI Conversation"
             bot-writing-text="..."
-            placeholder-text="Ask me anything about Nova Dyanmics" />
+            placeholder-text="Ask me anything" />
         </df-messenger>
       </div>
     </div>
