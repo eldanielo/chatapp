@@ -13,15 +13,27 @@
     console.log("onmount");
 
     const submitButton = document.getElementById("submitButton");
-    const urlInput = document.getElementById("urlInput");
+    const urlInput = document.getElementById("backgroundupload");
     const targetIframe = document.getElementById("targetIframe");
     const iframeContainer = document.getElementById("iframeContainer");
     const body = document.getElementById("body");
 
 
     submitButton.addEventListener("click", () => {
-      const url = urlInput.value;
-      document.getElementById("hidediv").style.display = "none";
+      document.getElementById("backgroundupload").click()
+ 
+
+
+    });
+    backgroundupload.addEventListener("change", function () {
+      const file = this.files[0]; // Get the selected file
+
+      if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (event) {
+          document.body.style.backgroundImage = `url(${event.target.result})`;
+          document.getElementById("hidediv").style.display = "none";
       document.getElementById("head").style.display = "none";
       document.getElementById("container").setAttribute('class',"") 
       document.getElementById("subcontainer").setAttribute('class',"") 
@@ -29,8 +41,10 @@
       document.getElementById("body").setAttribute('class',"");
       document.getElementById("chatdiv").setAttribute('class',"bottom-right-box");
 
+        };
 
-      body.background = url; 
+        reader.readAsDataURL(file);
+      }
     });
 
     const displayImage = document.getElementById("displayImage");
@@ -193,12 +207,10 @@
               <br>
               <label>Background:</label>
 
-              <input type="text" id="urlInput" list="urllist" />
-          <datalist id="urllist">
-                <option value="https://screenshot.googleplex.com/7gNWrAHAFBeWqtq.png" label="Dubai" /><option/>
-              </datalist>
 
-          <button class="btn btn-primary" id="submitButton">Use background from Screenshot (URL) instead</button>
+          <button class="btn btn-primary" id="submitButton">Use background from Screenshot instead</button>
+          <input type="file" id="backgroundupload" accept="image/*" style="display: none;" />
+          
           <div id="iframeContainer">
           <iframe id="targetIframe" src="https://html2canvas.hertzen.com/" />
         </div>
